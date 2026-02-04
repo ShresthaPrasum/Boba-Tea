@@ -3,9 +3,185 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bobba - bubble tea</title>
+  <title>Boba - bubble tea</title>
+  <style>
+    @font-face {
+      font-family: boba;
+      src: url(fonts/subset-DomaineDisplayCd-Regular.woff2);
+    }
+    @font-face {
+      font-family: boba1;
+      src: url(fonts/fa-brands-400.woff2);
+    }
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    body, html {
+      font-family: boba;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #f0e5d8;
+    }
+    .hero{
+      display: flex;
+      justify-content: center;
+      background: linear-gradient(90deg,rgba(255, 0, 183, 0.622),red,orange,yellow);
+      padding: 40px;
+
+    }
+    @keyframes hero {
+      from{
+        transform: translateY(0px);
+      }
+      to{
+        transform: translateY(-30px);
+      }
+    }
+    .hero img {
+      max-width: 80%;
+      height: auto;
+      animation: hero 1s both;
+      animation-timeline:  view(10%,75%);
+    }
+    .intro{
+      display: flex;
+      padding: 40px;
+      background-color: pink;
+    }
+    .intro-first{
+      display: flex;
+      flex-direction: column;
+      width: 65%;
+    }
+
+    .intro-first h1{
+      font-size: 4rem;
+    }
+
+    .intro-first img{
+      max-width: 90%;
+
+    }
+    .intro-second{
+      display: flex;
+      flex-direction: column;
+      margin-top: 4%;
+      width: 30%;
+    }
+    .intro-second h4{
+      font-family: boba1;
+    }
+    .intro-second h1{
+      font-size: 4rem;
+    }
+    .intro-second p{
+      font-family: boba;
+      font-size: 1.5rem;
+      margin-top: 20px;
+    }
+
+    .taste-bud{
+      display: flex;
+      padding: 80px;
+      padding-bottom: 0px;
+      background-color: #f0e5d8;
+      height: min-content;
+    }
+    .taste-first{
+      display: flex;
+      flex-direction: column;
+      width: 45%;
+    }
+    .taste-first h1{
+      font-size: 4rem;
+    }
+
+    .taste-first p{
+      font-family: boba;
+      font-size: 1.5rem;
+      margin-top: 20px;
+    }
+
+    .taste-second{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      margin-left: 5%;
+      margin-bottom: 15%;
+    }
+
+    .taste-second img{
+      max-width: 90%;
+      height: auto;
+    }
+    .item-section{
+      display: flex;
+      flex-direction: column;
+    }
+    .item-header{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .item-header h1{
+      font-size: 4rem;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
+  <div class="hero">
+    <img src="Img/boba.png" alt="Boba Tea">
+  </div>
+  
+
+  <div class="intro">
+    <div class="intro-first">
+      <h1>Bobba Tea</h1>
+      <img src="Img/300Couche-tard_web_accueil.png" alt="">
+    </div>
+    <div class="intro-second">
+      <h4>Popping Boba in a pouch</h4>
+      <h1>Add a burst of fun </h1>
+      <h1>to your Sloche!</h1>
+      <p>
+        Boba tea,also know as bubble tea is a popular Taiwanese drink that has gained worldwide popularity for its unique combination of milk, different fruit flavours, and chewy tapioca or popping boba pearls.
+      </p>
+      <p></p>
+    </div>
+  </div>
+
+  <div class="taste-bud">
+    <div class="taste-first">
+      <h1>Taste it, your taste buds will love it!</h1>
+      <p>
+        Experience the delightful burst of flavors with every sip of our Boba Tea. The combination of creamy milk, refreshing fruit flavors, and the fun popping boba pearls in your mouth creates a unique and enjoyable drinking experience that will leave your taste buds crave for more.
+      </p>
+    </div>
+
+    <div class="taste-second">
+      <img src="Img/gamme_naturel_bobba_canada-1536x1068.png" alt="">
+    </div>
+  </div>
+
+  <div class="item-section">
+    <div class="item-header">
+      <h1>Crazy flavors</h1>
+      <h2>Bubble tea like Bobba, you can't invent it! Tell me which bubbles </h2>
+      <h2>you drink and I'll tell you who you are.</h2>
+    </div>
+    <div class="item-container">
+
+    </div>
+  </div>
+
+
   
 </body>
 </html>
