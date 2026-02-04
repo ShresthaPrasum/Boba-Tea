@@ -127,11 +127,40 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      margin-bottom: 50px;
     }
 
     .item-header h1{
       font-size: 4rem;
       margin-bottom: 10px;
+    }
+
+    .item-container{
+      display: grid;
+      width: 80%;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      
+    }
+    .item{
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      height: 600px;
+      justify-content: center;
+    }
+    .hover-img{
+      opacity: 0;
+      transition: opacity 0.2s ease-in-out;
+    }
+    .item:hover .hover-img{
+      opacity: 1;
+    }
+    .item img{
+      height: 70%;
+      display: block;
+    }
+    .item h1{
+      text-align: center;
     }
   </style>
 </head>
@@ -177,7 +206,36 @@
       <h2>you drink and I'll tell you who you are.</h2>
     </div>
     <div class="item-container">
-
+      <div class="item">
+        <img src="Img/items/bobba-naturel-CA-fraise.png" alt="">
+        <h1>Strawberry</h1>
+          <!-- <img src="Img/items/rollover-bobba-naturel-CA-fraise.png" class="hover-img" alt=""> -->
+      </div>
+      <div class="item">
+        <img src="Img/items/bobba-naturel-CA-fraise.png" alt="">
+        <h1>Strawberry</h1>
+          <!-- <img src="Img/items/rollover-bobba-naturel-CA-fraise.png" class="hover-img" alt=""> -->
+      </div>
+      <div class="item">
+        <img src="Img/items/bobba-naturel-CA-fraise.png" alt="">
+        <h1>Strawberry</h1>
+          <!-- <img src="Img/items/rollover-bobba-naturel-CA-fraise.png" class="hover-img" alt=""> -->
+      </div>
+      <div class="item">
+        <img src="Img/items/bobba-naturel-CA-fraise.png" alt="">
+        <h1>Strawberry</h1>
+          <!-- <img src="Img/items/rollover-bobba-naturel-CA-fraise.png" class="hover-img" alt=""> -->
+      </div>
+      <div class="item">
+        <img src="Img/items/bobba-naturel-CA-fraise.png" alt="">
+        <h1>Strawberry</h1>
+          <!-- <img src="Img/items/rollover-bobba-naturel-CA-fraise.png" class="hover-img" alt=""> -->
+      </div>
+      <div class="item">
+        <img src="Img/items/bobba-naturel-CA-fraise.png" alt="">
+        <h1>Strawberry</h1>
+          <!-- <img src="Img/items/rollover-bobba-naturel-CA-fraise.png" class="hover-img" alt=""> -->
+      </div>
     </div>
   </div>
 
