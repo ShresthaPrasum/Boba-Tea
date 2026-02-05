@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Boba - bubble tea</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     @font-face {
       font-family: boba;
@@ -13,17 +14,21 @@
       font-family: boba1;
       src: url(fonts/fa-brands-400.woff2);
     }
+    @font-face {
+      font-family: boba2;
+      src: url(fonts/subset-Spoof-Light.woff2);
+    }
     *{
       margin: 0;
       padding: 0;
     }
-    body, html {
+    body {
       font-family: boba;
       margin: 0;
       padding: 0;
       height: 100%;
       width: 100%;
-      background-color: #f0e5d8;
+      background: linear-gradient(45deg,red,orange);
     }
     .loader{
       display: flex;
@@ -150,6 +155,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      background-color: #f0e5d8;
     }
     .item-header{
       display: flex;
@@ -232,6 +238,7 @@
       width: 100%;
       overflow:hidden;
       padding: 20px 0;
+      background-color: #f0e5d8;
     }
     .slide{
       display: flex;
@@ -278,120 +285,194 @@
       width: 12%;
       left: 0;
     }
+    .nav-container{
+      display: none;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      top: 0;
+      right: 0;
+      transition: all 0.3s ease;
+    }
+    .active{
+      display: block;
+    }
+    .nav{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      height: 100%;
+      right: 0;
+      margin-right:100px;
+      
+    }
+    .nav ul{
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      gap: 20px;
+      font-family: boba2;
+      
+    }
+    .nav ul li{
+      margin: 0 20px;
+    }
+    .nav ul li a{
+      text-decoration: none;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      font-weight: bold;
+    }
+    .logo{
+      position: fixed;
+      box-sizing: border-box;
+      padding: 12px 13px;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      background-color: white;
+      margin: 40px 60px 0 0;
+      right: 0;
+      top: 0;
+      filter: invert(1);
+      cursor: pointer;
+    }
+  
+    .naved{
+      transform: translateX(-30%);
+      transition: all 0.3s ease;
+    }
   </style>
 </head>
 <body>
-  <div class="loader">
+  <!-- <div class="loader">
     <h1>BOBBA</h1>
-  </div>
-
-  <div class="hero">
-    <img src="Img/boba.png" alt="Boba Tea">
-  </div>
-  
-
-  <div class="intro">
-    <div class="intro-first">
-      <h1>Bobba Tea</h1>
-      <img src="Img/300Couche-tard_web_accueil.png" alt="">
-    </div>
-    <div class="intro-second">
-      <h4>Popping Boba in a pouch</h4>
-      <h1>Add a burst of fun </h1>
-      <h1>to your Sloche!</h1>
-      <p>
-        Boba tea,also know as bubble tea is a popular Taiwanese drink that has gained worldwide popularity for its unique combination of milk, different fruit flavours, and chewy tapioca or popping boba pearls.
-      </p>
-      <p></p>
+  </div> -->
+  <div class="nav-container ">
+    <div class="nav">
+      <ul>
+        <li><a href="#"><i class="fas fa-circle-info"></i> About Us</a></li>
+        <li><a href="#"><i class="fas fa-question"></i> FAQ</a></li>
+        <li><a href="#"><i class="fas fa-store"></i> Where to buy</a></li>
+        <li><a href="#"><i class="fas fa-envelope"></i> Contact us</a></li>
+      </ul>
     </div>
   </div>
+  <div class="main naved">
 
-  <div class="taste-bud">
-    <div class="taste-first">
-      <h1>Taste it, your taste buds will love it!</h1>
-      <p>
-        Experience the delightful burst of flavors with every sip of our Boba Tea. The combination of creamy milk, refreshing fruit flavors, and the fun popping boba pearls in your mouth creates a unique and enjoyable drinking experience that will leave your taste buds crave for more.
-      </p>
-    </div>
-
-    <div class="taste-second">
-      <img src="Img/gamme_naturel_bobba_canada-1536x1068.png" alt="">
-    </div>
-  </div>
-
-  <div class="item-section">
-    <div class="item-header">
-      <h1>Crazy flavors</h1>
-      <h2>Bubble tea like Bobba, you can't invent it! Tell me which bubbles </h2>
-      <h2>you drink and I'll tell you who you are.</h2>
-    </div>
-    <div class="side-img">
-      <img src="Img/bobba-fruits-droite-accueil.png" alt="">
-      <img src="Img/bobba-fruits-gauche-accueil.png" alt="">
-    </div>
-    <div class="item-container">
-      <div class="item">
-        <img src="Img/items/bobba-naturel-CA-fraise.png " class="img" alt="">
-        <h1>Strawberry</h1>
-          
-      </div>
-      <div class="item">
-        <img src="Img/items/bobba-naturel-CA-limonade-fruit-du-dragon.png "class="img" alt="">
-        <h1>Dragon Fruit</h1>
     
+    <div class="hero">
+      <img src="Img/boba.png" alt="Boba Tea">
+      <i class="fas fa-bars logo"></i>
+    </div>
+    
+
+    <div class="intro">
+      <div class="intro-first">
+        <h1>Bobba Tea</h1>
+        <img src="Img/300Couche-tard_web_accueil.png" alt="">
       </div>
-      <div class="item">
-        <img src="Img/items/bobba-naturel-CA-limonade-mangue.png "class="img" alt="">
-        <h1>Mango</h1>
-         
+      <div class="intro-second">
+        <h4>Popping Boba in a pouch</h4>
+        <h1>Add a burst of fun </h1>
+        <h1>to your Sloche!</h1>
+        <p>
+          Boba tea,also know as bubble tea is a popular Taiwanese drink that has gained worldwide popularity for its unique combination of milk, different fruit flavours, and chewy tapioca or popping boba pearls.
+        </p>
+        <p></p>
       </div>
-      <div class="item">
-        <img src="Img/items/bobba-naturel-CA-melondeau.png "class="img" alt="">
-        <h1>Melon</h1>
+    </div>
+
+    <div class="taste-bud">
+      <div class="taste-first">
+        <h1>Taste it, your taste buds will love it!</h1>
+        <p>
+          Experience the delightful burst of flavors with every sip of our Boba Tea. The combination of creamy milk, refreshing fruit flavors, and the fun popping boba pearls in your mouth creates a unique and enjoyable drinking experience that will leave your taste buds crave for more.
+        </p>
+      </div>
+
+      <div class="taste-second">
+        <img src="Img/gamme_naturel_bobba_canada-1536x1068.png" alt="">
+      </div>
+    </div>
+
+    <div class="item-section">
+      <div class="item-header">
+        <h1>Crazy flavors</h1>
+        <h2>Bubble tea like Bobba, you can't invent it! Tell me which bubbles </h2>
+        <h2>you drink and I'll tell you who you are.</h2>
+      </div>
+      <div class="side-img">
+        <img src="Img/bobba-fruits-droite-accueil.png" alt="">
+        <img src="Img/bobba-fruits-gauche-accueil.png" alt="">
+      </div>
+      <div class="item-container">
+        <div class="item">
+          <img src="Img/items/bobba-naturel-CA-fraise.png " class="img" alt="">
+          <h1>Strawberry</h1>
+            
+        </div>
+        <div class="item">
+          <img src="Img/items/bobba-naturel-CA-limonade-fruit-du-dragon.png "class="img" alt="">
+          <h1>Dragon Fruit</h1>
+      
+        </div>
+        <div class="item">
+          <img src="Img/items/bobba-naturel-CA-limonade-mangue.png "class="img" alt="">
+          <h1>Mango</h1>
           
-      </div>
-      <div class="item">
-        <img src="Img/items/bobba-naturel-CA-peche.png "class="img" alt="">
-        <h1>Peach</h1>
-          
-      </div>
-      <div class="item">
-        <img src="Img/items/bullefusion_fraise_bobba_490g-1.png "class="img" alt="">
-        <h1>Strawberry</h1>
-      </div>
-      <div class="item">
-        <img src="Img/items/bullefusion_mangue_bobba_490g-1.png "class="img" alt="">
-        <h1>Mango</h1>
-      </div>
-      <div class="item">
-        <img src="Img/items/bullefusion_peche_bobba_490g-1.png "class="img" alt="">
-        <h1>Peach</h1>
+        </div>
+        <div class="item">
+          <img src="Img/items/bobba-naturel-CA-melondeau.png "class="img" alt="">
+          <h1>Melon</h1>
+            
+        </div>
+        <div class="item">
+          <img src="Img/items/bobba-naturel-CA-peche.png "class="img" alt="">
+          <h1>Peach</h1>
+            
+        </div>
+        <div class="item">
+          <img src="Img/items/bullefusion_fraise_bobba_490g-1.png "class="img" alt="">
+          <h1>Strawberry</h1>
+        </div>
+        <div class="item">
+          <img src="Img/items/bullefusion_mangue_bobba_490g-1.png "class="img" alt="">
+          <h1>Mango</h1>
+        </div>
+        <div class="item">
+          <img src="Img/items/bullefusion_peche_bobba_490g-1.png "class="img" alt="">
+          <h1>Peach</h1>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="doctor">
-    <div class="doctor-first">
-      <img src="Img/bullesfusion_bobba_accueil.png" alt="">
+    <div class="doctor">
+      <div class="doctor-first">
+        <img src="Img/bullesfusion_bobba_accueil.png" alt="">
+      </div>
+
+      <div class="doctor-second">
+        <h1>A bubble A Day</h1>
+        <h1>Keeps a doctor</h1>
+        <h1>Away Forever!</h1>
+      </div>
+
     </div>
 
-    <div class="doctor-second">
-      <h1>A bubble A Day</h1>
-      <h1>Keeps a doctor</h1>
-      <h1>Away Forever!</h1>
-    </div>
-
-  </div>
-
-  <div class="text-sliding">
-    <div class="slide">
-      <span>Crazy flavors • Bubble Tea • Fresh Boba • Creamy Milk •</span>
-      <span>Crazy flavors • Bubble Tea • Fresh Boba • Creamy Milk •</span>
-      <span>Crazy flavors • Bubble Tea • Fresh Boba • Creamy Milk •</span>
-    </div>
-    <div class="slide1">
-      <span>Crazy flavors • Bubble Tea • Fresh Boba • Creamy Milk •</span>
-      <span>Crazy flavors • Bubble Tea • Fresh Boba • Creamy Milk •</span>
-      <span>Crazy flavors • Bubble Tea • Fresh Boba • Creamy Milk •</span>
+    <div class="text-sliding">
+      <div class="slide">
+        <span>Crazy flavors • Bubble Tea • Fresh Boba • Creamy Milk •</span>
+        <span>Crazy flavors • Bubble Tea • Fresh Boba • Creamy Milk •</span>
+        <span>Crazy flavors • Bubble Tea • Fresh Boba • Creamy Milk •</span>
+      </div>
+      <div class="slide1">
+        <span>Crazy flavors • Bubble Tea • Fresh Boba • Creamy Milk •</span>
+        <span>Crazy flavors • Bubble Tea • Fresh Boba • Creamy Milk •</span>
+        <span>Crazy flavors • Bubble Tea • Fresh Boba • Creamy Milk •</span>
+      </div>
     </div>
   </div>
   <script src="script.js"></script>
