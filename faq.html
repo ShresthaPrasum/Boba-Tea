@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions</title>
+    <link rel="stylesheet" href="perm.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .hero {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            padding-top: 40px;
+
+        }
+
+        .hero-first {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .hero-title {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            font-weight: 100;
+            line-height: 1.1;
+        }
+
+        .hero-first img {
+            width: 30%;
+        }
+
+        .hero-second {
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-second img {
+            position: absolute;
+            width: 100%;
+            pointer-events: none;
+            transform: translateY(-100%);
+        }
+        .faq {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 80px;
+            background-color: white;
+        }
+        .faq-header{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 60%;
+        }
+        .faq-header h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+        .faq-header p{
+            font-size: 1.2rem;
+            color: #555;
+            font-family: boba2;
+        }
+        .side-img img:nth-child(1) {
+            position: absolute;
+            width: 12%;
+            right: 0;
+        }
+
+        .side-img img:nth-child(2) {
+        position: absolute;
+        width: 12%;
+        left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav-container ">
+        <div class="nav">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="aboutus.html"><i class="fas fa-circle-info"></i> About Us</a></li>
+                <li><a href="faq.html"><i class="fas fa-question"></i> FAQ</a></li>
+                <li><a href="#"><i class="fas fa-store"></i> Where to buy</a></li>
+                <li><a href="#"><i class="fas fa-envelope"></i> Contact us</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="main">
+        <div class="hero">
+            <i class="fas fa-bars logo"></i>
+            <div class="hero-first">
+                <div class="hero-title">
+                    <h1>Questions under the </h1>
+                    <h1>magnifying glass</h1>
+                </div>
+                <img src="Img/capibara.png" alt="">
+            </div>
+            <div class="hero-second">
+                <img src="Img/bobba-bulles.png" alt="">
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="faq-header">
+                <h1>Everything about Bobba bubble tea</h1>
+                <p>From the flavours offered through the nutritional values and calories to the manufacture of the juice pearls by our exclusive partner in Taiwan, we tell you everything about Bobba!</p>
+            </div>
+            <div class="side-img">
+                <img src="Img/bobba-fruits-droite-accueil.png" alt="">
+                <img src="Img/bobba-fruits-gauche-accueil.png" alt="">
+            </div>
+            <div class="question-container">
+                <div class="question">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
