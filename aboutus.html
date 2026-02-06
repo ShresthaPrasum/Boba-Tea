@@ -40,6 +40,9 @@
             justify-content: center;
             width: 50%;
         }
+        .hero-first h1{
+            font-size: 5.5rem;
+        }
         .hero-second{
             display: flex;
             justify-content: center;
@@ -96,14 +99,121 @@
             font-size: 1.2rem;
             width: 70%;
         }
+        .cards{
+            display: grid;
+            grid-template-columns: repeat(auto-fill,minmax(330px, 1fr));
+            width: 80%;
+            gap: 2rem;
+    
+        }
+        .card{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 330px;
+            height: 300px;
+            background-color: rgb(255, 119, 0);
+            perspective: 1000px;
+            transform-style: preserve-3d;
+            transition: transform 0.8s ease;
+        }
+        .card h1{
+            font-size: 7rem;
+            color: white;
+            margin-bottom: 0;
+        }
+        .card h3{
+            font-size: 2rem;
+            text-align: center;
+        }
+        .card-front,.card-back {
+        position: absolute;
+        backface-visibility: hidden;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        text-align: center;
+        }
+        .card-back {
+            transform: rotateY(180deg);
+        }
 
-
+        .card-back h3{
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        .card-back p{
+            font-size: 1.2rem
+        }
+        .active{
+            transform: rotateY(180deg);
+        }
+        .brain{
+            display: flex;
+            height: 80vh;
+        }
+        .brain-first{
+            display: flex;
+            width: 100%;
+        }
+        .brain-first img{
+            width: 100%;
+            z-index: 0;
+        }
+        .brain-second{
+            display: flex;
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            color: white;
+            z-index: 1;
+            padding-left: 80px;
+        }
+        .brain-second h1{
+            font-size: 5.5rem;
+        }
+        
+        .footer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(255, 191, 0);
+            padding: 50px 80px 20px 100px;
+        }
+        .footer-header{
+            display: flex;
+            width: 100%;
+        }
+        .footer-first{
+            display: flex;
+            width: 80%;
+        }
+        .footer-logo{
+            width: 30%;
+        }
+        .footer-second{
+            width: 20%;
+        }
+        .footer-second img{
+            width: 100%;
+        }
+        .footer-about{
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+            font-family: boba2;
+        }
     </style>
 </head>
 <body>
     <div class="hero">
         <div class="hero-first">
-            <h1>Ready To Drink</h1>
+            <h1>Ready-To-Drink</h1>
             <h1>Bubble Tea</h1>
         </div>
         <div class="hero-second">
@@ -130,9 +240,87 @@
         </div>
         <div class="cards">
             <div class="card">
-                
+                <div class="card-front"> 
+                    <h1>01</h1>
+                    <h3>Release your wild side</h3>
+                </div>
+                <div class="card-back">
+                    <h3>Release your wild side</h3>
+                    <p>A sip of Bobba and you will dive into a world of completely delirious natural flavours!</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-front">
+                    <h1>02</h1>
+                    <h3>Live Largely</h3>
+                </div>
+                <div class="card-back">
+                    <h3>Live Largely</h3>
+                    <p>Why take yourself seriously, seriously? Bobba harnesses creativity and life’s pleasures – everything that matters.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-front">
+                    <h1>03</h1>
+                    <h3>Dare to get wet</h3>
+                </div>
+                <div class="card-back">
+                    <h3>Dare to get wet</h3>
+                    <p>Mingle with everything that touches you with a Bobba bottle in hand to make your place. We only have one life to live!</p>
+                </div>
             </div>
         </div>
     </div>
+    <div class="brain">
+        <div class="brain-second">
+            <h1>Bubble to the brain</h1>
+        </div>
+        <div class="brain-first">
+            <img src="Img/aboutusimg3.jpg" alt="">
+        </div>
+        
+    </div>
+    <div class="footer">
+        <div class="footer-header">
+            <div class="footer-first">
+
+                <div class="footer-logo">
+                    <img src="Img/logo.svg" alt="">
+                </div>
+
+                <div class="footer-about">
+                    <h4>About Us</h4>
+                    <h4>Bubble tea CAN</h4>
+                    <h4>Bubble tea US</h4>
+                    <h4>Popping Bobba</h4>
+                    <h4>Alcoholic bubble tea (18+)</h4>
+                    <h4>Store Locator</h4>
+                    <h4>FAQ</h4>
+                </div>
+                
+                <div class="footer-contact">
+
+                </div>
+            </div>
+            <div class="footer-second">
+                <img src="Img/panda.png" alt="">
+            </div>
+            
+
+        </div>
+        <div class="footer-footer">
+            <p>© 2024 Bobba. All rights reserved.</p>
+            
+        </div>
+    </div>
+    <script>
+        const cards = document.querySelectorAll('.card');
+
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                card.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>
