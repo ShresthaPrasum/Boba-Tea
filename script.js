@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', () => {
             navContainer.classList.remove('active');
             main.classList.remove('naved');
+            active = false;
         });
         
     });
