@@ -18,13 +18,14 @@
         padding: 0;
     }
 
-    body {
+    html body {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
         font-family: Arial, sans-serif;
         font-family: boba;
         background: linear-gradient(45deg,red,orange);
+        scroll-behavior: smooth;
     }
     .nav-container {
       display: none;
